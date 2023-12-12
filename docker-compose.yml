@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - "/etc/nginx:/etc/nginx"
+    ports:
+      - "3030:3030"
+  eppbe:
+    image: excellerentsolutions/eppbe:latest
+    ports:
+      - "3000:80"
